@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: arial,sans-serif!important;
+  color: white!important;
+  background-color: #1f2123!important;
+  height: 100vh;
+}
+
+/* -- Верхнея панель -- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: #101112;
+  color: #fff;
+  z-index: 999;
+  display: flex;/* -- */
+  justify-content: space-between;/* -- */
+}
+.nav-left {
+  /* Стили для левого меню */
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+.nav-right {
+  /* Стили для правого меню */
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+}
+.nav-left span,
+.nav-left div, 
+.nav-left a {
+  margin-right: 10px;
+}
+.nav-right span,
+.nav-right div, 
+.nav-right a {
+  margin-left: 10px;
+}
+.nav-right a {
+  font-size: 14px;
+}
+/* Фото пользователя */
+.circle-image-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #000; 
+}
+.circle-image-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.circle-image-container i {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 28px;
+  color: #323232;
+  text-align: center;
+  line-height: 39px;
+}
+.circle-image-container img:not([src]) + i {
+  display: block;
+}
+
+/* -- Контейнер для меню и контента -- */
+main {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  padding-top: 50px;
+}
+/* ---- Боковое меню слева ---- */
+.admin-sidebar {
+  width: 250px;
+  flex: 0 0 250px;
+  background-color:#181a1b;
+  padding-top: 15px;
+}
+.active-menu{
+  color: white!important;
+  background-color: #d97d00;
+}
+.admin-content {
+  flex: 1;
+  padding: 15px;
+  overflow: auto;
+}
+.side-menu{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.side-item{}
+.side-link{
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  padding: 2px 15px;
+}
+.side-link:hover{
+  color: white;
+  background-color: #a76000;
+}
+/* ---- Контент ---- */
+.admin-card-header{
+  background-color: #101112;
+  padding: 10px;
+}
+.admin-card-header-el{
+  color: #a9ff00!important;
+  font-size: 20px!important;
+}
+.admin-card-content{
+  padding: 10px;
+  background-color: #181a1b;
+  box-shadow: ;
+}
+.pagination{
+  margin-bottom: 0;
+}
+/* ------ Кнопки ------ */
+.admin-btn {
+  white-space: nowrap;
+  padding: 4px 8px!important;
+  font-size: 12px!important;
+}
+.btn-link {
+  color: #ffffff!important;
+  text-decoration: none!important;
+}
+.btn-link:hover {
+  color: #a9ff00!important;
+}
+/* ------ Таблицы ------ */
+.admin-table {
+  font-size: 14px;
+}
+.table-grey thead {
+  border-bottom: #343434!important;
+}
+.table-grey tr {
+  color: white!important;
+  vertical-align: middle;
+  background-color: #181a1b;
+  border-bottom: #343434!important;
+}
+.table-grey tbody tr:hover{
+  color: white!important;
+  background-color: #212324!important;
+}
+/* ------ Формы ------ */
+.form-group {
+  margin-bottom: 15px;
+}
+.admin-form div label{
+  font-size: 12px;
+}
+.admin-form div input,
+.admin-form div textarea{
+  background-color: #25282a;
+  color: white;
+  border: none;
+  margin-bottom: 15px;
+  border-radius: 0;
+}
+#visual-editor{
+  border: none;
+  border-radius: 0;
+}
+.admin-form div .html-textarea:focus{
+  background-color: #110d16;
+  color: #46cf00;
+}
+.html-view {
+  white-space: pre;
+}
+.control-btn {
+  padding: 10px 10px;
+  background-color: #101112;
+}
+.control-btn a{
+  font-size: 12px;
+  padding: 2px 6px;
+}
+.control-btn input{
+  margin-bottom: 0!important;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+}
+.image-favicon {
+  display: block;
+  width: 48px;
+  min-height: 48px;
+}
+.image-post {
+  display: block;
+  width: 100%;
+  min-height: 150px;
+}
+/* Скрыть тег <img>, если основное изображение не загружено */
+.image-post:not([alt]) {
+  display: none;
+}
+
+/* ---- Форма входа ---- */
+.form-login {
+  border: 1px solid #3a3a3a!important;
+}
